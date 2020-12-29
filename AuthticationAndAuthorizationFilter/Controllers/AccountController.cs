@@ -23,6 +23,7 @@ namespace AuthticationAndAuthorizationFilter.Controllers
         {
             if(ModelState.IsValid)
             {
+                var s = 1;
                 using (var dbcontext = new ApplicationContext())
                 {
                     User user = dbcontext.Users.Where(u => u.UserId == model.UserId && u.Password == model.Password).FirstOrDefault();
